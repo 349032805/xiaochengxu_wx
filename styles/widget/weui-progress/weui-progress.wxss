@@ -1,15 +1,17 @@
-@import "../../base/fn.wxss";
-
 .weui-progress {
-    display: flex;
-    align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
 }
-
 .weui-progress__bar {
-    flex: 1;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
 }
-
 .weui-progress__opr {
-    margin-left: 15px;
-    font-size: 0;
+  margin-left: 15px;
+  font-size: 0;
 }

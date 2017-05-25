@@ -1,12 +1,60 @@
-<!--index.wxml-->
-<view class="container">
-  <view  bindtap="bindViewTap" class="userinfo">
-    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+<!--<view class="index">
+  <view class="cur_address">
+    <navigator url="../changeAddress/changeAddress">{{address}}</navigator>
+    <navigator url="../searchRestaurant/searchRestaurant"><view class="line">搜索</view></navigator>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <view class="table_container">
+    <view class="page__bd" wx:if="{{addressOK}}">
+      <view class="weui-tab">
+        <view class="weui-navbar">
+          <block wx:for="{{tabs}}" wx:key="*this">
+            <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+              <view class="weui-navbar__title">{{item}}</view>
+            </view>
+          </block>
+          <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+        </view>
+        <view class="weui-tab__panel">
+          <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+            <scroll-view scroll-y="true" style="height: 1000rpx;">
+              <view wx:for="{{array}}" wx:key="*this" class="near_restaurant flex">
+                <image src="http://wiki.lbsyun.baidu.com/cms/logo/lbsyunlogo296-120.png?logo2017"></image>
+                <view class="classname">
+                  <text>{{item.address}}</text>
+                </view>
+                <text>{{item.distance}}</text>
+              </view>
+            </scroll-view>
+          </view>
+          <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+            <scroll-view scroll-y="true" style="height: 1000rpx;">
+              <view wx:for="{{array2}}" wx:key="*this" class="near_restaurant flex">
+                <image src="http://wiki.lbsyun.baidu.com/cms/logo/lbsyunlogo296-120.png?logo2017"></image>
+                <view class="classname">
+                  <text>{{item.address}}</text>
+                </view>
+                <text>{{item.distance}}</text>
+              </view>
+            </scroll-view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="classname" wx:if="{{addressErr}}"  bindtap="getAddressAgain">
+        请点击重新获取地址
+    </view>
+    <button open-type='share'>转发</button>
   </view>
-
-  <view>tesfdsfdt</view>
+</view>-->
+<view class="index">
+  <view class="search_header flexBC">
+     <view class="classname flexBC">
+         <icon type="success" size="12"/>
+         <navigator url="../changeAddress/changeAddress" class='address overflow'>{{address}}</navigator>
+     </view>
+     <view class="search_bar  flexSC">
+          <icon type="search" size='10'/>
+          <text>搜索商家名称</text>
+     </view>
+  </view>
 </view>

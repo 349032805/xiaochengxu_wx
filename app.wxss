@@ -1,4 +1,12 @@
+@import 'styles/weui.wxss';
+
 /**app.wxss**/
+
+page {
+  width: 100%;
+  height: 100%;
+}
+
 .container {
   height: 100%;
   display: flex;
@@ -7,4 +15,22 @@
   justify-content: space-between;
   padding: 200rpx 0;
   box-sizing: border-box;
-} 
+}
+/*flex布局 center   center*/
+.flexBC {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/*flex布局 flex-start    center*/
+.flexSC {
+  display: flex;
+  align-items: center;
+  justify-content:flex-start;
+}
+/*省略...*/
+.overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
